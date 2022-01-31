@@ -44,6 +44,7 @@ let high=document.getElementById('w-high');
 let low=document.getElementById('w-low');
 let humidity=document.getElementById('w-hum');
 let  bg=document.getElementById('w-bg');
+let err=document.getElementById('w-err');
 
 document.addEventListener('DOMContentLoaded', getWeather);
 
@@ -62,7 +63,7 @@ function getWeather(){
       low.textContent=`${kelvTof(results.main.temp_min)}℉`;
       humidity.textContent=`${(results.main.humidity)}`
       icon.setAttribute('src', `http://openweathermap.org/img/wn/${results.weather[0].icon}@2x.png`); 
-
+      err.textContent='';
       const a=kelvTof(results.main.temp);
       if ( a > 70) 
         bg.style.background='radial-gradient(577.51% 120.03% at 47.46% 102.72%, #883100 26.72%, #FFDA7B 100%)';
@@ -74,7 +75,10 @@ function getWeather(){
       bg.style.background='radial-gradient(577.51% 120.03% at 47.46% 102.72%, #005788 26.72%, #7BD0FF 100%)';
      
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      err.textContent='Double-check your input';
+      icon.setAttribute('src', `https://www.pngkey.com/png/full/395-3958556_sad-puppy-cartoon-.png`);
+    });
 
 }
 

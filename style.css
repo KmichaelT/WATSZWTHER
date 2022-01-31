@@ -47,11 +47,28 @@ background: radial-gradient(613.75% 145.54% at -11.79% 120.42%, #43BBFF 26.72%, 
     
     color: #FFFFFF;
 }
+.err-msg{
+    position: absolute;
+    width: 300px;
+    height: 51px;
+    bottom: 120px;
+    left: 104px;
+    
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 56px;
+    text-align: center;
+    
+    color: #5e5e5e;
+}
 .location{
 
     position: absolute;
     width: 300px;
-    height: 141px;
+    height: 50px;
     left: 110px;
     top: 0px;
     
