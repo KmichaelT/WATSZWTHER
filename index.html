@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<title>WATSZWTHER</title>
+</head>
+<body>
+<div class="position-relative main_wrapper">
+<div class="position-absolute top-50 start-50 translate-middle">
+    <div class="maindiv " id="w-bg">
+        <h2 class="location" id="w-location">dallas</h2>
+        <h1 class="temp" id="w-temp"></h1>
+        <img  class="forcast_icon" id="w-icon" alt="weather icon">
+        <h4 class="forcast_label" id="w-disc">Forcast</h4>
+        <h3 class="hightemp" id="w-high">74</h3>
+        <h4 class="highlabel">High</h4>
+        <h3 class="lowtemp"id="w-low">69</h3>
+        <h4 class="lowlabel">Low</h4>
+        <h3 class="hum_temp" id="w-hum" >53</h3>
+        <h4 class="hum_label">Humidity</h4>
+    </div>
+    <form class="row g-3 form  ps-5">
+      <div class="col-6">
+          <label for="city" class="visually-hidden" >City</label>
+          <input type="text" class="form-control" id="city" placeholder="City">
+        </div>
+        <div class="col-3">
+          <label for="state" class="visually-hidden">state</label>
+          <input type="text" class="form-control" id="state" placeholder="ST">
+        </div>
+      <div class="col-3">
+        <button id="w-get" type="submit" class="btn btn-success ps-4 pe-4 mb-3">Get</button>
+      </div>
+    </form>
+</div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+
+<script src="main.js"> </script>
+
+
+
+</body>
+</html>
