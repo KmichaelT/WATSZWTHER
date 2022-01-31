@@ -21,9 +21,20 @@ document.getElementById('w-get').addEventListener('click', (e) => {
   localStorage.setItem('city', city);
   localStorage.setItem('state', state);
 });
- 
 
-const weather = new Weather(localStorage.getItem('city'), localStorage.getItem('state'));
+if(localStorage.getItem('city') === null) {
+  newcity = 'Dallas';
+} else {
+  newcity = localStorage.getItem('city');
+}
+
+if(localStorage.getItem('state') === null) {
+  newstate = 'Tx';
+} else {
+  newstate = localStorage.getItem('state');
+}
+
+const weather = new Weather(newcity, newstate);
 
 let cityname=document.getElementById("w-location");
 let temp=document.getElementById('w-temp');
@@ -61,8 +72,7 @@ function getWeather(){
        
       else  
       bg.style.background='radial-gradient(577.51% 120.03% at 47.46% 102.72%, #005788 26.72%, #7BD0FF 100%)';
-      
-      console.log(a)
+     
     })
     .catch(err => console.log(err));
 
